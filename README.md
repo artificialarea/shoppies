@@ -1,4 +1,17 @@
-# Getting Started with Create React App
+# The Shoppies
+
+[The brief](https://docs.google.com/document/d/1SdR9rQpocsH5rPTOcxr9noqHRld5NJlylKO9Hf94U8U/edit#).
+
+### Notable
+
+Adopting [Polaris React](https://github.com/Shopify/polaris-react#using-the-react-components) components as part of the Shopify [**Polaris design system**](https://polaris.shopify.com/). Polaris React [Component Documentation](https://polaris.shopify.com/components/component-status).
+
+
+
+
+<br />
+
+<hr />
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

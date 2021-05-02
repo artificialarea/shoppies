@@ -1,7 +1,7 @@
 import React from 'react';
 import {Page} from '@shopify/polaris';
 
-import App from '../App';
+import App from '../components/App';
 
 import {mountWithAppProvider} from './utils/enzyme';
 

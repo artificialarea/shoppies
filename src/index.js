@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 // import enTranslations from '@shopify/polaris/locales/en.json';
 
 import './index.scss';
-import App from './App';
+import App from './components/App';
 
 
 // function WrappedApp() {

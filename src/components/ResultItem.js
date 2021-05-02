@@ -21,3 +21,7 @@ export default function ResultItem(props) {
         </li>
     )
 }
+
+ResultItem.defaultProps = {
+    item: {}
+}

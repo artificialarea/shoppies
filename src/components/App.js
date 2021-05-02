@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import Search from './Search';
 import ResultList from './ResultList';
-import mockSearchResults from './mock/mockSearchResults';
+import mockSearchResults from '../mock/mockSearchResults';
 
 import './App.scss';
 

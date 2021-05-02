@@ -1,10 +1,27 @@
 # The Shoppies
 
-[The brief](https://docs.google.com/document/d/1SdR9rQpocsH5rPTOcxr9noqHRld5NJlylKO9Hf94U8U/edit#).
+### [The Brief](https://docs.google.com/document/d/1SdR9rQpocsH5rPTOcxr9noqHRld5NJlylKO9Hf94U8U/edit#)
+
+<br />
+
+### Checklist
+
+- [x] Search OMDB and display list of results (movies only)
+- [x] Updates to search term should update the result list
+- [x] Each search result should contain movie title, year of release and button to nominate film.
+    - [ ] If movie already nominated, disable nomination button
+    - _extras..._
+    - [x] Poster Image (but may opt to only display for selected nominees)
+- [ ] Add a movie from the search reults to user's nomination list
+- [ ] View the list of films user already nominated
+- [ ] Ability to remove a nominee from the nomination list
+- [ ] Once 5 nominees selected, notify user they're finished (suggestion to display a banner)
+
+<br />
 
 ### Notable
 
-Adopting [Polaris React](https://github.com/Shopify/polaris-react#using-the-react-components) components as part of the Shopify [**Polaris design system**](https://polaris.shopify.com/). Polaris React [Component Documentation](https://polaris.shopify.com/components/component-status).
+Decided against using, but note [Polaris React](https://github.com/Shopify/polaris-react#using-the-react-components) components as part of the Shopify [**Polaris design system**](https://polaris.shopify.com/). Polaris React [Component Documentation](https://polaris.shopify.com/components/component-status).
 
 
 

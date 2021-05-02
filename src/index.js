@@ -1,21 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import '@shopify/polaris/dist/styles.css';
-import {AppProvider} from '@shopify/polaris';
-import enTranslations from '@shopify/polaris/locales/en.json';
+// import '@shopify/polaris/dist/styles.css';
+// import {AppProvider} from '@shopify/polaris';
+// import enTranslations from '@shopify/polaris/locales/en.json';
 
-import './index.css';
+import './index.scss';
 import App from './App';
 
 
-function WrappedApp() {
-  return (
-    <AppProvider i18n={enTranslations}>
-      <App />
-    </AppProvider>
-  );
-}
+// function WrappedApp() {
+//   return (
+//     <AppProvider i18n={enTranslations}>
+//       <App />
+//     </AppProvider>
+//   );
+// }
   
-ReactDOM.render(<WrappedApp />, document.getElementById('root'));
+// ReactDOM.render(<WrappedApp />, document.getElementById('root'));
 
-
+ReactDOM.render(
+    <App />,
+    document.getElementById('root')
+)

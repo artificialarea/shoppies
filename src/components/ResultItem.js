@@ -10,6 +10,10 @@ export default function ResultItem(props) {
         Poster: image
     } = props.item;
 
+    const {
+        handleAddNominee
+    } = props;
+
     return (
         <li className="result-item">
             <div className="info">
@@ -17,7 +21,13 @@ export default function ResultItem(props) {
                 <span className="title">{title}</span>
                 <span className="year">({year})</span>
             </div>
-            <button className="nominate">Nominate</button>
+            <button 
+                className="nominate"
+                id={id}
+                onClick={(event) => handleAddNominee(event)}
+            >
+                Nominate
+            </button>
         </li>
     )
 }

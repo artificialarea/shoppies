@@ -3,7 +3,10 @@ import ResultItem from './ResultItem';
 
 
 export default function ResultList(props) {
-    const { results } = props;
+    const { 
+        results,
+        handleAddNominee
+    } = props;
 
     return (
         <section className="result-list">
@@ -12,6 +15,7 @@ export default function ResultList(props) {
                     <ResultItem 
                         key={item.imdbID + index}
                         item={item}
+                        handleAddNominee={handleAddNominee}
                     />
                 ))}
             </ul>

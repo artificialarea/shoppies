@@ -31,7 +31,7 @@ export default function App() {
     const handleDeleteNominee = (event) => {
         event.preventDefault();
         const { id } = event.target;
-        setNominations(nominations.filter(nominee => nominee.imdbID !==id));
+        setNominations(nominations.filter(nominee => nominee.imdbID !== id));
     }
 
     const fetchSearchResults = (query) => {
@@ -85,8 +85,21 @@ export default function App() {
             })
     }
 
+    // useEffects to retrieve and store localStorage data
+    // so nominations remain in a peristant state.
     useEffect(() => {
-        // Delay fetch call until pause in user typing
+        const data = localStorage.getItem('data')
+        if (data) {
+            setNominations(JSON.parse(data))
+        }
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem('data', JSON.stringify(nominations))
+    });
+
+    // Delay fetch call until there is a pause in user typing
+    useEffect(() => {
         // const timeoutID = setTimeout(() => setDelayedQuery(query), 700); // temp test in lieu of fetch
         const timeoutID = setTimeout(() => fetchSearchResults(query), 700);
         return () => clearTimeout(timeoutID);
@@ -97,19 +110,19 @@ export default function App() {
             <header>
                 <h1>The Shoppies! {delayedQuery}</h1>
             </header>
-            
-            <Search 
+
+            <Search
                 query={query}
                 handleQueryChange={handleQueryChange}
             />
 
-            <ResultList 
+            <ResultList
                 results={searchResults}
                 // results={mockSearchResults.Search} // mock in lieu of fetch
                 handleAddNominee={handleAddNominee}
             />
 
-            <NomineeList 
+            <NomineeList
                 nominations={nominations}
                 handleDeleteNominee={handleDeleteNominee}
             />

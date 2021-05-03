@@ -12,10 +12,11 @@
     - [ ] If movie already nominated, disable nomination button
     - _extras..._
     - [x] Poster Image (but may opt to only display for selected nominees)
-- [ ] Add a movie from the search reults to user's nomination list
+- [x] Add a movie from the search reults to user's nomination list
 - [ ] View the list of films user already nominated
-- [ ] Ability to remove a nominee from the nomination list
+- [x] Ability to remove a nominee from the nomination list
 - [ ] Once 5 nominees selected, notify user they're finished (suggestion to display a banner)
+- [x] Save nominations list if user leaves the page (simply via localStorage)
 
 <br />
 

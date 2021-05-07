@@ -14,7 +14,7 @@
 - [x] Add a movie from the search reults to user's nomination list
 - [x] View the list of films user already nominated
 - [x] Ability to remove a nominee from the nomination list
-- [ ] Once 5 nominees selected, notify user they're finished (suggestion to display a banner)
+- [x] Once 5 nominees selected, notify user they're finished (suggestion to display a banner)
 - [x] Save nominations list if user leaves the page (simply via localStorage)
 
 <br />

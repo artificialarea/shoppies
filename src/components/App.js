@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 
 import Search from './Search';
 import ResultList from './ResultList';
+import EndGame from './EndGame';
 import mockSearchResults from '../mock/mockSearchResults';
-
 
 import './App.scss';
 import NomineeList from './NomineeList';
+
 
 export default function App() {
     const [query, setQuery] = useState('');
@@ -105,14 +106,18 @@ export default function App() {
 
     return (
         <div className="App">
+
             <header>
                 <h1>The Shoppies!</h1>
             </header>
 
-            <Search
-                query={query}
-                handleQueryChange={handleQueryChange}
-            />
+            {(nominations.length === 5)
+                ?   <EndGame />
+                :   <Search
+                        query={query}
+                        handleQueryChange={handleQueryChange}
+                    />
+            }
 
             <ResultList
                 results={searchResults}

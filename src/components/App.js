@@ -10,7 +10,6 @@ import NomineeList from './NomineeList';
 
 export default function App() {
     const [query, setQuery] = useState('');
-    const [delayedQuery, setDelayedQuery] = useState(''); // temp test: useEffect.setTimeout
     const [searchResults, setSearchResults] = useState([]);
     const [nominations, setNominations] = useState([]);
 
@@ -100,7 +99,6 @@ export default function App() {
 
     // Delay fetch call until there is a pause in user typing
     useEffect(() => {
-        // const timeoutID = setTimeout(() => setDelayedQuery(query), 700); // temp test in lieu of fetch
         const timeoutID = setTimeout(() => fetchSearchResults(query), 700);
         return () => clearTimeout(timeoutID);
     }, [query]);
@@ -108,7 +106,7 @@ export default function App() {
     return (
         <div className="App">
             <header>
-                <h1>The Shoppies! {delayedQuery}</h1>
+                <h1>The Shoppies!</h1>
             </header>
 
             <Search
@@ -118,8 +116,8 @@ export default function App() {
 
             <ResultList
                 results={searchResults}
-                // results={mockSearchResults.Search} // mock in lieu of fetch
                 handleAddNominee={handleAddNominee}
+                nominations={nominations}
             />
 
             <NomineeList

@@ -5,7 +5,8 @@ import ResultItem from './ResultItem';
 export default function ResultList(props) {
     const { 
         results,
-        handleAddNominee
+        handleAddNominee,
+        nominations
     } = props;
 
     return (
@@ -16,6 +17,7 @@ export default function ResultList(props) {
                         key={item.imdbID + index}
                         item={item}
                         handleAddNominee={handleAddNominee}
+                        nominations={nominations}
                     />
                 ))}
             </ul>

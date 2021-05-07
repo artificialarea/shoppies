@@ -11,7 +11,8 @@ export default function ResultItem(props) {
     } = props.item;
 
     const {
-        handleAddNominee
+        handleAddNominee,
+        nominations
     } = props;
 
     return (
@@ -25,6 +26,7 @@ export default function ResultItem(props) {
                 className="nominate"
                 id={id}
                 onClick={(event) => handleAddNominee(event)}
+                disabled={(nominations.find(item => item.imdbID === id)) ? true : false}
             >
                 Nominate
             </button>
@@ -33,5 +35,6 @@ export default function ResultItem(props) {
 }
 
 ResultItem.defaultProps = {
-    item: {}
+    item: {},
+    nominations: []
 }
